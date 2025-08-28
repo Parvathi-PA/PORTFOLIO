@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f3f4f6;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #111827;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      position: fixed;
+      height: 100%;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 2rem;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: #cbd5e1;
+      margin: 1rem 0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      color: #60a5fa;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 220px;
+      padding: 3rem;
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #111827;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem;
+      background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #fff;
+      color: #3b82f6;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e5e7eb;
+    }
+
+    /* Project Cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 4px 4px 10px #d1d5db, -4px -4px 10px #ffffff;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #3b82f6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #6b7280;
+    }
+
+    .sidebar .btn {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  text-align: center;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar .btn:hover {
+  background: #2563eb;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+   <div class="sidebar">
+       <h2>Portfolio</h2>
+     <nav>
+       <a href="#home">Home</a> <!-- stays internal -->
+       <a href="#about">About</a> <!-- stays internal -->
+       <a href="#projects">Projects</a> <!-- stays internal -->
+   
+       <!-- External links -->
+       <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+       <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+       <a href="resume.pdf" target="_blank">Resume</a>
+     </nav>
+   </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <section id="home" class="hero">
+        <h1>Hi, I'm Parvathi P A 👩‍💻</h1>
+        <p>Full Stack Developer | AI Enthusiast | Problem Solver</p>
+        <a href="#projects" class="btn">See My Work</a>
+        <!-- Download button -->
+        <a href="portfolio.pdf" class="btn" download>📄 Download Portfolio</a>
+    </section>
+
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a python full stack developer who loves building modern, responsive websites and 
+        exploring artificial intelligence. My focus is on creating 
+        clean, user-friendly experiences.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A sleek personal portfolio built with HTML, CSS, and JS.</p>
+        </div>
+        <div class="card">
+          <h3>AI Resume Analyzer</h3>
+          <p>An AI-powered system to analyze and recommend jobs.</p>
+        </div>
+        <div class="card">
+          <h3>Hostel Management System</h3>
+          <p>A web app to manage hostels, rooms, and residents.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+       <h2>Contact</h2>
+       <p>📧 Email: <a href="mailto:parvathipa2001@gmail.com">parvathipa2001@gmail.com</a></p>
+       <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/parvathipa" target="_blank">linkedin.com/in/parvathipa</a></p>
+       <p>💻 GitHub: <a href="https://github.com/Parvathi-PA" target="_blank">github.com/Parvathi-PA</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Parvathi P A| All Rights Reserved</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -15,104 +15,187 @@
     }
 
     body {
-      display: flex;
-      min-height: 100vh;
-      background: #f3f4f6;
-      color: #333;
+      background: linear-gradient(#441e1e);
+      margin: 0;
+       padding-top: 70px; /* offset so content doesn't hide behind navbar */
+
     }
 
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background: #111827;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
+    .navbar {
+      position: fixed;      /* stays on top while scrolling */
+      top: 0;
+      left: 0;
+      width: 100%;          /* full width */
+      background-color: #22290e56; /* dark background */
+      color: white;
+      display: flex;        /* flexbox for alignment */
       align-items: center;
-      padding: 2rem 1rem;
-      position: fixed;
-      height: 100%;
-    }
+      justify-content: space-between;
+      padding: 15px 30px;
+      z-index: 1000;        /* keep above content */
+}
 
-    .sidebar h2 {
-      margin-bottom: 2rem;
-      font-weight: 800;
-      font-size: 1.5rem;
-    }
+  .navbar h2 {
+    margin: 0;
+    font-size: 24px;
+}
 
-    .sidebar nav a {
-      display: block;
-      color: #cbd5e1;
-      margin: 1rem 0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+  .navbar nav {
+    display: flex;
+    gap: 20px; /* space between links */
+}
 
-    .sidebar nav a:hover {
-      color: #60a5fa;
-    }
+  .navbar nav a {
+    color: rgb(198, 92, 92);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+  .navbar nav a:hover {
+    color: #ff9800; /* hover effect */
+}
 
     /* Main content */
     .main {
-      margin-left: 220px;
+      margin-left: 20px;
       padding: 3rem;
       width: 100%;
+      height: 70%
     }
 
     section {
-      margin-bottom: 4rem;
+      font-size: xx-large;
+      min-height: 70vh;
+      padding: 80px 20px;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      color: #4A4A4A;
+    }
+    section .projects{
+      color: #f5c7c7;
     }
 
     section h2 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       font-size: 2rem;
       margin-bottom: 1.5rem;
-      color: #111827;
+      color: #3464cc;
+    }
+    section img{
+      height: 70%;
+      width: 60%;
+      margin-top: 10px;
+    }
+    section a{
+      color: #ada16f;
     }
 
-    .hero {
+    .contact{
+      
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      padding: 3rem;
-      background: linear-gradient(135deg, #60a5fa, #3b82f6);
-      border-radius: 20px;
-      color: #fff;
-    }
 
+    }
+    .hero {
+        background-color: #441e1e;
+        color: #ffffff;
+        text-align: center;
+        padding: 100px 20px;
+      }
+      
     .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-    }
-
+        font-size: 70px;
+        color: #f5c7c7; /* main heading */
+      }
+      
     .hero p {
-      margin: 1rem 0;
-      font-size: 1.2rem;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 45px;
+        color: #f5c7c7; /* softer subtext */
+      }
+      
+    .hero btn {
+        background-color: rgb(89, 166, 210); /* accent button */
+        color: #f5c7c7;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    .hero button:hover {
+        background-color: #e6b800;
+      }
+      
+          
+    .about{
+          
+          height: 50%;
+        }
+    #about {
+          width: 100%;
+          padding: 60px 0;
+          background: #441e1e;
+          
+    }
+    
+    #about h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+    
+    .about-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      width: 70%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+    .about .column{
+      flex: 1;
+      padding: 20px;
+    }
+    
+    .about-image img {
+      width: 800%;
+      height: 500px;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .about-text {
+      color: #f5c7c7;
+      font-size: 28px;
+      line-height: 1.6;
+      
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: #fff;
-      color: #3b82f6;
-      font-weight: 600;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #e5e7eb;
-    }
 
     /* Project Cards */
-    .projects {
+    .projects h2{
+      margin-left: auto;
+      margin-right: auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
     }
+    
+    
 
     .card {
-      background: #fff;
+      background:rgb(74, 46, 46);
       padding: 1.5rem;
       border-radius: 15px;
       box-shadow: 4px 4px 10px #d1d5db, -4px -4px 10px #ffffff;
@@ -131,7 +214,8 @@
     footer {
       text-align: center;
       padding: 1.5rem;
-      color: #6b7280;
+      font-size: x-large;
+      color: #f5c7c7;
     }
 
     .sidebar .btn {
@@ -140,7 +224,7 @@
   padding: 0.7rem;
   text-align: center;
   background: #3b82f6;
-  color: #fff;
+  color: #441313;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
@@ -151,11 +235,40 @@
   background: #2563eb;
 }
 
+.contact a{
+  color: #ada16f;   /* gold for normal links */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.contact p{
+  margin-top: 30px;
+  color:#f5c7c7;
+}
+.contact a:hover{
+  color: #ffffff;
+}
+.contact a:visited {
+  color: #c7c7c7;
+}
+.skills{
+
+  text-align: center;
+}
+.skills ul,tr,table{
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  
+  color: #f5c7c7;
+}
+
   </style>
 </head>
 <body>
   <!-- Sidebar -->
-   <div class="sidebar">
+   <div class="navbar">
        <h2>Portfolio</h2>
      <nav>
        <a href="#home">Home</a> <!-- stays internal -->
@@ -174,27 +287,47 @@
     <section id="home" class="hero">
         <h1>Hi, I'm Parvathi P A 👩‍💻</h1>
         <p>Full Stack Developer | AI Enthusiast | Problem Solver</p>
-        <a href="#projects" class="btn">See My Work</a>
+       <div><a href="#projects" class="btn">See My Work</a></div>
         <!-- Download button -->
         <a href="portfolio.pdf" class="btn" download>📄 Download Portfolio</a>
     </section>
 
-
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        I am a python full stack developer who loves building modern, responsive websites and 
-        exploring artificial intelligence. My focus is on creating 
-        clean, user-friendly experiences.
-      </p>
-    </section>
+      <div class="about-row">
+    
+
+    <!-- left side: Text -->
+       
+         <div class="column">
+           <div class="about-text">
+             <p>
+               Motivated and detail-oriented Computer Science graduate with practical experience in developing scalable full-stack web and mobile applications. 
+               Proficient in Python, Django, and React, with strong expertise in RESTful APIs, responsive UI/UX design, and database management.
+               Passionate about building innovative solutions through clean, efficient, and maintainable code.
+               Eager to contribute technical expertise and grow within a forward-thinking development team.
+             </p>
+           </div>
+         </div>
+       
+    <!-- right side: Picture -->
+    
+     <div class="column">
+        <div class="about-image">
+          <img src="picture.jpg" alt="My Photo">
+        </div>
+     </div>
+    
+  </div>
+</section>
+    
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects">
         <div class="card">
-          <h3>Portfolio Website</h3>
-          <p>A sleek personal portfolio built with HTML, CSS, and JS.</p>
+          <h3>Learning Hub</h3>
+          <p>A webapplication that helps students to learn various technologies by watching video tutorials uploaded by instructors.</p>
         </div>
         <div class="card">
           <h3>AI Resume Analyzer</h3>
@@ -207,8 +340,44 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="skills" class="skills">
+       <h2>Skills</h2>
+      <table cellspacing="20">
+        <tr>
+          <th>Technical Skills</th>
+          <th>Soft Skills</th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>React</li>
+              <li>SQL</li>
+              <li>HTML,CSS</li>
+              <li>Java</li>
+              
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Communication</li>
+              <li>Problem-Solving</li>
+              <li>Teamwork</li>
+              <li>Time Management</li>
+              <li>Adaptability</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+
+    </section>
+
+
+    <section id="contact" class="contact">
        <h2>Contact</h2>
+       <p>Parvathi P A</p>
        <p>📧 Email: <a href="mailto:parvathipa2001@gmail.com">parvathipa2001@gmail.com</a></p>
        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/parvathipa" target="_blank">linkedin.com/in/parvathipa</a></p>
        <p>💻 GitHub: <a href="https://github.com/Parvathi-PA" target="_blank">github.com/Parvathi-PA</a></p>
